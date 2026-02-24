@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Santuario di Maria SS. del Carmelo (Madonna delle Galline) — Pagani</title>
+  <meta name="description" content="Santuario della Madonna delle Galline a Pagani, conosciuto per la festa e il folklore locale.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Santuario Madonna delle Galline</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span>»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span>»</span>
+        <span>Santuario</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Santuario di Maria SS. del Carmelo.jpg" alt="Santuario Madonna delle Galline" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Pagani</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Santuario / Centro di Fede</div>
+      <div class="info-item"><strong>🎉 Festa</strong> Domenica in Albis</div>
+      <div class="info-item"><strong>⭐ Carattere</strong> Tradizionale / Popolare</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>Il Santuario di Maria Santissima del Carmelo, popolarmente conosciuto come Santuario della Madonna delle Galline, è il centro di una delle feste più sentite della Campania.</p>
+      <p>La tradizione narra che alcune galline, razzolando, riportarono alla luce una tavola lignea con l'immagine della Vergine, dando inizio a un culto secolare che unisce fede e folklore.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Santuario di Maria SS. del Carmelo.jpg" alt="Santuario" title="Il Santuario di Pagani">
+        <img src="../src/assets/Santuario di Maria SS. del Carmelo.jpg" alt="Processione" title="Tradizioni popolari">
+        <img src="../src/assets/Santuario di Maria SS. del Carmelo.jpg" alt="Interno" title="Interno del santuario">
+      </div>
+    </section>
+    <section class="place-map-container">
+      <div id="place-map"></div>
+    </section>
+    <section class="place-section">
+      <h2>ℹ️ Info Pratiche</h2>
+      <p><strong>Festa principale:</strong> La festa tradizionale si svolge annualmente.</p>
+      <p><strong>Culto:</strong> Luogo attivo di pellegrinaggio e devozione.</p>
+    </section>
+    <div class="place-related">
+      <h3>🔗 Siti Correlati</h3>
+      <div class="place-related-grid">
+        <a href="basilica-santalfonso.html" class="related-link">Basilica</a>
+        <a href="museo-archeologico-provinciale.html" class="related-link">Museo</a>
+        <a href="cattedrale-san-prisco.html" class="related-link">Cattedrale</a>
+      </div>
+    </div>
+  </main>
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© 2026 Agro Nocerino-Sarnese</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7240, lng = 14.5755; // approssimazione Pagani
+    const map = L.map('place-map').setView([lat, lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Santuario Madonna delle Galline').openPopup();
+  </script>
+</body>
+</html>

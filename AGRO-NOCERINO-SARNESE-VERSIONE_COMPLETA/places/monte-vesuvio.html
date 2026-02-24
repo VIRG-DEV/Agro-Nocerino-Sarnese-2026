@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Monte Vesuvio & Parco Nazionale — Ercolano</title>
+  <meta name="description" content="Monte Vesuvio con sentieri naturalistici e panoramiche spettacolari. Escursioni, trekking e geologia vulcanica.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header with Parallax -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #228B22 0%, #3CB371 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #228B22;">🌿 NATURA</div>
+        <h1>Monte Vesuvio & Parco Nazionale</h1>
+        <p class="header-subtitle">Vulcano attivo tra storia e biodiversità</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Monte Vesuvio</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Ercolano / Ottaviano</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2v20m10-10H2"></path>
+        </svg>
+        <div><strong>Altitudine</strong> <br> 1281 m</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Accesso</strong> <br> Tutto l'anno</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 11l3 3L22 4"></path>
+          <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div><strong>Difficoltà</strong> <br> Media</div>
+      </div>
+    </div>
+
+    <!-- Main Sections with Animations -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>📖 La Meraviglia Naturale</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">Il Monte Vesuvio è il vulcano più pericoloso e famoso del mondo. Situato nella Campania, è noto per l'eruzione del 79 d.C. che ha sepolto le città romane di Pompei e Ercolano. Oggi il parco nazionale offre sentieri escursionistici unici.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #f0fff4 0%, #e6f7ff 100%); border-left: 4px solid #228B22; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #228B22;">💡 Curiosità:</strong> È considerato uno dei vulcani più attivi d'Europa e rappresenta una minaccia vulcanica significativa.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Premium -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>🎨 Galleria Fotografica</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/Monte Vesuvio & Parco Nazionale.jpg" alt="Cratere del Vesuvio" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Cratere Principale</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/Monte Vesuvio & Parco Nazionale.jpg" alt="Sentieri trekking" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Sentieri Escursionistici</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/Monte Vesuvio & Parco Nazionale.jpg" alt="Flora vulcanica" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Flora Endemica</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/Monte Vesuvio & Parco Nazionale.jpg" alt="Vista panoramica" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Vista dal Cratere</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>⭐ Caratteristiche Principali</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🥾</div>
+          <h3>Trekking Guidato</h3>
+          <p>Sentieri ben segnalati da esperti vulcanologi</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔬</div>
+          <h3>Geologia Vulcanica</h3>
+          <p>Tour educativo sulla formazione vulcanica</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <h3>Biodiversità Unica</h3>
+          <p>Specie vegetali adattate al vulcano</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📷</div>
+          <h3>Panoramiche Spettacolari</h3>
+          <p>Viste sulla baia di Napoli e costa</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Posizione sulla Mappa</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Informazioni Pratiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>⏰ Orari</h4>
+          <p>9:00 - 17:00 (estivo)<br>9:00 - 15:00 (invernale)</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🎟️ Biglietti</h4>
+          <p>€ 10 adulti<br>€ 5 ridotto</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🚗 Raggiungibilità</h4>
+          <p>40 min da Napoli<br>Parcheggio disponibile</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>📞 Contatti</h4>
+          <p>+39 081 239 3111<br>www.vesuvio.it</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Places -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Scopri Anche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="valle-sarno-river.html" class="related-card">
+          <div class="related-icon">🌊</div>
+          <h3>Valle del Sarno</h3>
+          <p>Sentieri fluviali e natura</p>
+        </a>
+        <a href="bosco-ninfeo.html" class="related-card">
+          <div class="related-icon">🦆</div>
+          <h3>Bosco del Ninfeo</h3>
+          <p>Laghi costieri e avifauna</p>
+        </a>
+        <a href="parco-monti-picentini.html" class="related-card">
+          <div class="related-icon">⛰️</div>
+          <h3>Monti Picentini</h3>
+          <p>Cascate e grotte millennie</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Agro Nocerino-Sarnese | Scopri la bellezza della Campania</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.8210, lng = 14.4265;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Monte Vesuvio</b><br>🌿 Parco Nazionale').openPopup();
+  </script>
+</body>
+</html>

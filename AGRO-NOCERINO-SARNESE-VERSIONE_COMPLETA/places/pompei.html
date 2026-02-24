@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pompei — Agro Nocerino-Sarnese</title>
+  <meta name="description" content="Pompei - sito archeologico famoso, patrimonio UNESCO">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <header style="padding:1rem;">
+    <a href="../index.html" class="btn">← Torna</a>
+  </header>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Pompei.jpg" alt="Scavi di Pompei" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Pompei</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Sito Archeologico UNESCO</div>
+      <div class="info-item"><strong>📅 Fondazione</strong> VIII sec. a.C.</div>
+      <div class="info-item"><strong>⭐ Stato</strong> Patrimonio dell'Umanità</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>Pompei è una delle testimonianze più incredibili della vita romana, cristallizzata dall'eruzione del Vesuvio nel 79 d.C.</p>
+      <p>Gli scavi offrono un'immersione totale nella vita quotidiana dell'antichità, tra fori, teatri, ville affrescate e strade millenarie.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Pompei.jpg" alt="Foro" title="Il Foro di Pompei">
+        <img src="../src/assets/Pompei.jpg" alt="Affreschi" title="Affreschi romani">
+        <img src="../src/assets/Pompei.jpg" alt="Anfiteatro" title="L'Anfiteatro">
+      </div>
+    </section>
+
+    <section style="margin-top:1.5rem;">
+      <h2>Mappa</h2>
+      <div id="place-map" style="height:360px;border-radius:.5rem;overflow:hidden;box-shadow:var(--shadow-soft);"></div>
+    </section>
+  </main>
+
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© Agro Nocerino-Sarnese</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.748, lng = 14.498;
+    const map = L.map('place-map').setView([lat, lng], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Pompei').openPopup();
+  </script>
+</body>
+</html>
