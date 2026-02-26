@@ -471,7 +471,7 @@ Oltre all'homepage, abbiamo 28 file HTML, uno per ogni sito:
 
 ```
 places/
-├─ monte-vesuvio.html           ← Dettagli Vesuvio
+├─ castello-parco-fienga.html   ← Dettagli Castello
 ├─ azienda-viticola-fiano.html  ← Dettagli azienda vino
 ├─ oasi-fiume-sarno.html        ← Dettagli oasi
 ├─ parco-monti-picentini.html   ← Dettagli parco

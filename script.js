@@ -1,3 +1,142 @@
+// ═════════════════════════════════════════════════════════════
+// 🌐 SEZIONE 0: TRADUZIONI - MULTILINGUA (ITA/ENG)
+// ═════════════════════════════════════════════════════════════
+
+const translations = {
+  it: {
+    "nav-home": "Home",
+    "nav-discover": "Scopri",
+    "nav-places": "Luoghi",
+    "nav-map": "Mappa",
+    "nav-gallery": "Galleria",
+    "nav-ai": "Agro AI",
+    "nav-3d": "3D",
+    "hero-title": "Agro Nocerino-Sarnese",
+    "hero-subtitle": "Scopri il cuore del patrimonio culturale dell'Italia meridionale, i paesaggi mozzafiato e le tradizioni agricole",
+    "hero-explore": "Esplora la Regione",
+    "hero-view-map": "Vedi Mappa",
+    "section-places-title": "Luoghi da Non Perdere",
+    "section-places-desc": "Scopri alcune delle bellezze dell'Agro-Nocerino-Sarnese. Clicca per maggiori dettagli e per trovarle sulla mappa.",
+    "filter-all": "Tutti",
+    "filter-churches": "Chiese",
+    "filter-monuments": "Monumenti",
+    "filter-castles": "Castelli",
+    "section-discover-title": "Scopri la Regione",
+    "section-discover-desc": "Una terra dove storia, cultura e natura convergono per creare esperienze indimenticabili",
+    "poi-historic-title": "Patrimonio Storico",
+    "poi-historic-desc": "Esplora chiese secolari, cattedrali e meraviglie architettoniche che raccontano la storia del nostro ricco passato.",
+    "poi-natural-title": "Bellezza Naturale",
+    "poi-natural-desc": "Dalla Valle del Sarno ai Monti Lattari, scopri paesaggi mozzafiato e ambienti naturali incontaminati.",
+    "poi-agri-title": "Eccellenza Agricola",
+    "poi-agri-desc": "Vivi le tradizioni dal campo alla tavola, visita le fattorie didattiche e assaggia i prodotti locali autentici.",
+    "poi-ruins-title": "Siti Archeologici",
+    "poi-ruins-desc": "Esplora l'antica Nuceria Alfaterna e altri siti storici che riportano in vita il passato dell'Agro.",
+    "stat-historic": "Siti Storici",
+    "stat-farms": "Aziende Locali",
+    "stat-villages": "Borghi",
+    "stat-years": "Anni di Storia",
+    "section-map-title": "Esplora la Regione",
+    "section-map-desc": "Naviga tra siti storici, punti di riferimento culturali e bellezze naturali",
+    "section-gallery-title": "Galleria",
+    "section-gallery-desc": "Vivi la bellezza dell'Agro Nocerino-Sarnese attraverso le immagini",
+    "footer-about": "Celebriamo il patrimonio culturale e la bellezza naturale della regione più autentica del Sud Italia.",
+    "footer-links": "Link Rapidi",
+    "footer-contact": "Contatti",
+    "footer-follow": "Seguici",
+    "footer-rights": "© 2026 Portale Agro Nocerino-Sarnese. Tutti i diritti riservati.",
+    "translate-btn": "English",
+    "chat-title": "Assistente Agro AI",
+    "chat-online": "Online",
+    "chat-welcome": "Ciao! Sono il tuo assistente virtuale per l'Agro Nocerino-Sarnese. Come posso aiutarti oggi?",
+    "chat-placeholder": "Scrivi un messaggio...",
+    "chat-bot-typing": "L'assistente sta scrivendo...",
+    "chat-error": "Spiacente, si è verificato un errore. Riprova più tardi."
+  },
+  en: {
+    "nav-home": "Home",
+    "nav-discover": "Discover",
+    "nav-places": "Places",
+    "nav-map": "Map",
+    "nav-gallery": "Gallery",
+    "nav-ai": "Agro AI",
+    "nav-3d": "3D",
+    "hero-title": "Agro Nocerino-Sarnese",
+    "hero-subtitle": "Discover the heart of Southern Italy's cultural heritage, breathtaking landscapes, and agricultural traditions",
+    "hero-explore": "Explore the Region",
+    "hero-view-map": "View Map",
+    "section-places-title": "Must-See Places",
+    "section-places-desc": "Discover some of the beauties of Agro-Nocerino-Sarnese. Click for more details and to find them on the map.",
+    "filter-all": "All",
+    "filter-churches": "Churches",
+    "filter-monuments": "Monuments",
+    "filter-castles": "Castles",
+    "section-discover-title": "Discover the Region",
+    "section-discover-desc": "A land where history, culture, and nature converge to create unforgettable experiences",
+    "poi-historic-title": "Historic Heritage",
+    "poi-historic-desc": "Explore centuries-old churches, cathedrals, and architectural marvels that tell the story of our rich past.",
+    "poi-natural-title": "Natural Beauty",
+    "poi-natural-desc": "From the Sarno Valley to the Lattari Mountains, discover breathtaking landscapes and pristine natural environments.",
+    "poi-agri-title": "Agricultural Excellence",
+    "poi-agri-desc": "Experience farm-to-table traditions, visit working farms, and taste authentic local produce.",
+    "poi-ruins-title": "Archaeological Sites",
+    "poi-ruins-desc": "Explore ancient Nuceria Alfaterna and other historic sites that bring the past to life.",
+    "stat-historic": "Historic Sites",
+    "stat-farms": "Local Farms",
+    "stat-villages": "Villages",
+    "stat-years": "Years of History",
+    "section-map-title": "Explore the Region",
+    "section-map-desc": "Navigate through historic sites, cultural landmarks, and natural beauty",
+    "section-gallery-title": "Gallery",
+    "section-gallery-desc": "Experience the beauty of Agro Nocerino-Sarnese through images",
+    "footer-about": "Celebrating the cultural heritage and natural beauty of Southern Italy's most authentic region.",
+    "footer-links": "Quick Links",
+    "footer-contact": "Contact",
+    "footer-follow": "Follow Us",
+    "footer-rights": "© 2026 Agro Nocerino-Sarnese Portal. All rights reserved.",
+    "translate-btn": "Italiano",
+    "chat-title": "Agro AI Assistant",
+    "chat-online": "Online",
+    "chat-welcome": "Hi! I'm your virtual assistant for Agro Nocerino-Sarnese. How can I help you today?",
+    "chat-placeholder": "Type a message...",
+    "chat-bot-typing": "Assistant is typing...",
+    "chat-error": "Sorry, an error occurred. Please try again later."
+  }
+};
+
+let currentLang = localStorage.getItem('language') || 'en';
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[currentLang][key]) {
+      if (el.tagName === 'INPUT' && (el.type === 'text' || el.type === 'password' || el.type === 'email')) {
+        el.placeholder = translations[currentLang][key];
+      } else {
+        el.textContent = translations[currentLang][key];
+      }
+    }
+  });
+  
+  // Update the language toggle button text
+  const langBtn = document.getElementById('language-toggle-text');
+  if (langBtn) {
+    langBtn.textContent = translations[currentLang]['translate-btn'];
+  }
+
+  // Update HTML lang attribute
+  document.documentElement.lang = currentLang;
+}
+
+function toggleLanguage() {
+  currentLang = currentLang === 'en' ? 'it' : 'en';
+  localStorage.setItem('language', currentLang);
+  updateContent();
+  
+  // Re-render places to update dynamic content
+  const activeFilter = document.querySelector('.places-controls button.active')?.getAttribute('data-filter') || 'all';
+  renderPlaces(activeFilter);
+}
+
 /*
 ╔═══════════════════════════════════════════════════════════════╗
 ║  🎯 SCRIPT PRINCIPALE - SITO AGRO NOCERINO-SARNESE           ║
@@ -11,7 +150,6 @@ COSA FA QUESTO FILE:
 ✅ Gestisce il tema light/dark e lo ricorda
 ✅ Mostra/nascondi il menu mobile
 ✅ Gestisce il carousel (slideshow) di immagini
-✅ Login e registrazione degli utenti
 ✅ Genera dinamicamente la griglia dei siti (28 luoghi)
 ✅ Filtra i siti per categoria (Storia, Natura, Enogastronomia)
 */
@@ -258,135 +396,7 @@ document.getElementById('carousel-next').addEventListener('click', nextImage);
 document.getElementById('carousel-prev').addEventListener('click', prevImage);
 
 // ═════════════════════════════════════════════════════════════
-// 🔐 SEZIONE 4: AUTENTICAZIONE - LOGIN & REGISTRAZIONE
-// ═════════════════════════════════════════════════════════════
-
-/**
- * FUNZIONE: Apri il modale (finestra popup) di login
- */
-function openLoginModal() {
-  document.getElementById('login-modal').classList.add('active');
-}
-
-/**
- * FUNZIONE: Chiudi il modale di login
- */
-function closeLoginModal() {
-  document.getElementById('login-modal').classList.remove('active');
-}
-
-// Collega il bottone "Sign In" all'apertura del modale
-document.getElementById('auth-btn').addEventListener('click', openLoginModal);
-// Collega la X del modale alla chiusura
-document.getElementById('modal-close').addEventListener('click', closeLoginModal);
-
-// Bottoni per scambiare tra form di login e registrazione
-document.getElementById('show-register').addEventListener('click', () => {
-  document.getElementById('login-form-container').style.display = 'none';
-  document.getElementById('register-form-container').style.display = 'block';
-});
-
-document.getElementById('show-login').addEventListener('click', () => {
-  document.getElementById('register-form-container').style.display = 'none';
-  document.getElementById('login-form-container').style.display = 'block';
-});
-
-/**
- * FUNZIONE: Login (accesso)
- * COME: Verifica username e password nel localStorage
- * SE CORRETTE: Salva l'utente nel cookie
- */
-function login(username, password) {
-  // Leggi la lista di utenti dal localStorage (default: array vuoto)
-  const users = JSON.parse(localStorage.getItem('users') || '[]');
-  
-  // Cerca un utente con username e password corrispondenti
-  const user = users.find(u => u.username === username && u.password === password);
-  
-  if (!user) {
-    // Credenziali errate
-    alert('Invalid username or password');
-    return;
-  }
-  
-  // ✅ Login riuscito! Salva nel cookie per 7 giorni
-  setCookie('user', JSON.stringify(user), 7);
-  updateAuthUI(); // Aggiorna il bottone (mostrerà "Hello, username")
-  closeLoginModal(); // Chiudi la finestra popup
-}
-
-/**
- * FUNZIONE: Registrazione (creazione nuovo account)
- * COME: Aggiunge un nuovo utente al localStorage
- * CONTROLLA: Se l'username è già usato (non puoi avere due username uguali)
- */
-function register(username, email, password) {
-  const users = JSON.parse(localStorage.getItem('users') || '[]');
-  
-  // Controlla se l'username esiste già
-  if (users.some(u => u.username === username)) {
-    alert('Username already exists. Choose a different username.');
-    return;
-  }
-  
-  // ✅ Nuovo utente valido! Aggiungilo alla lista
-  users.push({ username, email, password });
-  // Salva la lista aggiornata nel localStorage (memoria del browser)
-  localStorage.setItem('users', JSON.stringify(users));
-  
-  // Loggati automaticamente con il nuovo account
-  setCookie('user', JSON.stringify({ username, email }), 7);
-  updateAuthUI();
-  closeLoginModal();
-}
-
-/**
- * FUNZIONE: Aggiorna il bottone di autenticazione
- * MOSTRA:
- *   - "Sign In" se non sei loggato (clicca per aprire il modale)
- *   - "Hello, username" se sei loggato (clicca per uscire)
- */
-function updateAuthUI() {
-  const authBtn = document.getElementById('auth-btn');
-  const user = getCookie('user'); // Leggi il cookie 'user'
-  
-  if (user) {
-    // ✅ Utente è loggato
-    const parsed = JSON.parse(user);
-    authBtn.textContent = `Hello, ${parsed.username}`;
-    authBtn.onclick = () => {
-      // Click = Logout (elimina il cookie)
-      setCookie('user', '', -1); // Scadenza negativa = immediato
-      updateAuthUI(); // Aggiorna di nuovo
-    };
-  } else {
-    // ❌ Utente non loggato
-    authBtn.textContent = 'Sign In';
-    authBtn.onclick = openLoginModal;
-  }
-}
-
-// Quando l'utente invia il form di login
-document.getElementById('login-form').addEventListener('submit', e => {
-  e.preventDefault(); // Non ricaricare la pagina
-  login(
-    document.getElementById('login-username').value,
-    document.getElementById('login-password').value
-  );
-});
-
-// Quando l'utente invia il form di registrazione
-document.getElementById('register-form').addEventListener('submit', e => {
-  e.preventDefault(); // Non ricaricare la pagina
-  register(
-    document.getElementById('register-username').value,
-    document.getElementById('register-email').value,
-    document.getElementById('register-password').value
-  );
-});
-
-// ═════════════════════════════════════════════════════════════
-// 📍 SEZIONE 5: DATABASE - 28 SITI DA VISITARE
+//  SEZIONE 5: DATABASE - 28 SITI DA VISITARE
 // ═════════════════════════════════════════════════════════════
 
 /**
@@ -402,36 +412,146 @@ document.getElementById('register-form').addEventListener('submit', e => {
  * - image: path all'immagine
  */
 const luoghi = [
-  // 🏛️ STORIA - 11 SITI ARCHEOLOGICI
-  { id: 'battistero-santa-maria-maggiore', nome: "Battistero Paleocristiano di Santa Maria Maggiore", comune: "Nocera Superiore", lat: 40.7485, lng: 14.6400, categoria: 'storia', descrizione: "Monumento paleocristiano VI secolo (La Rotonda). Vasca battesimale.", image: 'src/assets/Battistero Paleocristiano di Santa Maria Maggiore.jpeg' },
-  { id: 'museo-archeologico-provinciale', nome: "Museo Archeologico Provinciale dell'Agro Nocerino", comune: "Nocera Inferiore", lat: 40.7475, lng: 14.6180, categoria: 'storia', descrizione: "Collezione di reperti dell'antica Nuceria Alfaterna.", image: "src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" },
-  { id: 'castello-parco-fienga', nome: "Castello del Parco Fienga", comune: "Nocera Inferiore", lat: 40.7478, lng: 14.6205, categoria: 'storia', descrizione: "Fortezza medievale con viste panoramiche.", image: 'src/assets/Castello_Del_Parco_Nocera.jpg' },
-  { id: 'museo-valle-sarno', nome: "Museo Archeologico Nazionale della Valle del Sarno", comune: "Sarno", lat: 40.8120, lng: 14.6200, categoria: 'storia', descrizione: "Palazzo Capua - insediamenti dal IX sec. a.C.", image: 'src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg' },
-  { id: 'cattedrale-san-prisco', nome: "Cattedrale di San Prisco", comune: "Nocera Inferiore", lat: 40.7470, lng: 14.6170, categoria: 'storia', descrizione: "Chiesa storica della diocesi locale.", image: 'src/assets/Cattedrale di San Prisco.jpg' },
-  { id: 'basilica-santalfonso', nome: "Basilica di Sant'Alfonso Maria de' Liguori", comune: "Pagani", lat: 40.7235, lng: 14.5760, categoria: 'storia', descrizione: "Santuario e museo alfonsiano.", image: "src/assets/Basilica di Sant'Alfonso Maria de' Liguori.jpg" },
-  { id: 'santuario-madonna-galline', nome: "Santuario di Maria SS. del Carmelo", comune: "Pagani", lat: 40.7240, lng: 14.5755, categoria: 'storia', descrizione: "Centro spirituale con festa tradizionale.", image: 'src/assets/Santuario di Maria SS. del Carmelo.jpg' },
-  { id: 'concattedrale-san-michele', nome: "Concattedrale di San Michele Arcangelo", comune: "Sarno", lat: 40.8115, lng: 14.6220, categoria: 'storia', descrizione: "Chiesa storica nel centro di Sarno.", image: 'src/assets/Concattedrale di San Michele Arcangelo.jpg' },
-  { id: 'santuario-santa-maria-dei-bagni', nome: "Santuario di Santa Maria dei Bagni", comune: "Scafati", lat: 40.7440, lng: 14.4840, categoria: 'storia', descrizione: "Luogo sacro legato a fonte miracolosa.", image: 'src/assets/Santuario di Santa Maria dei Bagni.jpg' },
-  { id: 'piazza-del-corso', nome: "Piazza del Corso", comune: "Nocera Inferiore", lat: 40.7480, lng: 14.6190, categoria: 'storia', descrizione: "Area archeologica a vista con resti romani.", image: 'src/assets/Piazza del Corso-Nocera_Inferiore.jpg' },
-  { id: 'eremo-santa-maria-castello', nome: "Eremo di Santa Maria a Castello", comune: "Castel San Giorgio", lat: 40.7720, lng: 14.5560, categoria: 'storia', descrizione: "Eremo medievale con vista panoramica.", image: 'src/assets/Eremo_di_Santa_Maria_a_Castello.jpg' },
-  { id: 'pompei', nome: "Pompei", comune: "Pompei", lat: 40.748, lng: 14.498, categoria: 'storia', descrizione: "Sito archeologico famoso, patrimonio UNESCO.", image: 'src/assets/Pompei.jpg' },
-  
-  // 🌿 NATURA - 6 SITI NATURALI
-  { id: 'monte-vesuvio', nome: "Monte Vesuvio & Parco Nazionale", comune: "Ercolano", lat: 40.8210, lng: 14.4265, categoria: 'natura', descrizione: "Vulcano attivo con sentieri naturalistici e panoramiche spettacolari.", image: 'src/assets/Monte Vesuvio & Parco Nazionale.jpg' },
-  { id: 'valle-sarno-river', nome: "Valle del Sarno - Sentieri Fluviali", comune: "Sarno", lat: 40.8150, lng: 14.5900, categoria: 'natura', descrizione: "Ecosistema fluviale con biodiversità e percorsi trekking.", image: 'src/assets/Valle del Sarno - Sentieri Fluviali.jpg' },
-  { id: 'oasi-fiume-sarno', nome: "Oasi Naturale del Fiume Sarno", comune: "Scafati", lat: 40.7400, lng: 14.4900, categoria: 'natura', descrizione: "Riserva naturale protetta con specie endemiche e birdwatching.", image: 'src/assets/Oasi Naturale del Fiume Sarno.jpg' },
-  { id: 'bosco-ninfeo', nome: "Bosco del Ninfeo & Laghi", comune: "Nocera Inferiore", lat: 40.7520, lng: 14.6100, categoria: 'natura', descrizione: "Ambiente costiero con flora rara e zone umide protette.", image: 'src/assets/Bosco del Ninfeo & Laghi.jpg' },
-  { id: 'parco-monti-picentini', nome: "Parco Monti Picentini", comune: "Mercato San Severino", lat: 40.7100, lng: 14.7000, categoria: 'natura', descrizione: "Catena montuosa con cascate, grotte e sentieri escursionistici.", image: 'src/assets/Parco Monti Picentini.jpg' },
-  { id: 'sarno', nome: "Sarno", comune: "Sarno", lat: 40.811, lng: 14.623, categoria: 'natura', descrizione: "Valle e attività agricole; offre scorci naturali e borghi caratteristici.", image: 'src/assets/Sarno.jpg' },
-  
-  // 🍷 ENOGASTRONOMIA - 7 AZIENDE AGRICOLE
-  { id: 'azienda-viticola-fiano', nome: "Azienda Viticola Fiano DOCG", comune: "Avellino", lat: 40.9050, lng: 14.7800, categoria: 'enogastronomia', descrizione: "Cantina con degustazione vini bianchi d'eccellenza e tour in vigna.", image: 'src/assets/Azienda Viticola Fiano DOCG.jpg' },
-  { id: 'caseificio-taurasi', nome: "Caseificio Artigianale Taurasi", comune: "Taurasi", lat: 40.9400, lng: 14.8200, categoria: 'enogastronomia', descrizione: "Formaggi DOP e laboratori di produzione casearia.", image: 'src/assets/Caseificio Artigianale Taurasi.jpeg' },
-  { id: 'orto-biologico-nocera', nome: "Orto Biologico Agri-Social", comune: "Nocera Inferiore", lat: 40.7450, lng: 14.6150, categoria: 'enogastronomia', descrizione: "Fattoria biologica con raccolta a mano e ristorazione km0.", image: 'src/assets/agriculture-1.jpg' },
-  { id: 'frantoio-olio-pagani', nome: "Frantoio Oleario Pagani Bio", comune: "Pagani", lat: 40.7270, lng: 14.5800, categoria: 'enogastronomia', descrizione: "Frantoio biologico con visita guidata raccolta olive.", image: 'src/assets/Frantoio Oleario Pagani Bio.webp' },
-  { id: 'laboratorio-pasta-sarno', nome: "Laboratorio Pasta Artigianale", comune: "Sarno", lat: 40.8100, lng: 14.6200, categoria: 'enogastronomia', descrizione: "Pasta fresca fatta a mano e corsi di cucina tradizionale.", image: 'src/assets/agriculture-1.jpg' },
-  { id: 'enoteca-regionale', nome: "Enoteca Regionale & Wine Bar", comune: "Nocera Inferiore", lat: 40.7480, lng: 14.6180, categoria: 'enogastronomia', descrizione: "Selezione vini DOC e DOP, piatti gourmet abbinati.", image: 'src/assets/Azienda Viticola Fiano DOCG.jpg' },
-  { id: 'fattoria', nome: "Fattoria Locale", comune: "Poggiomarino", lat: 40.78, lng: 14.52, categoria: 'enogastronomia', descrizione: "Prodotti tipici, tecniche agricole e eventi stagionali.", image: 'src/assets/Fattoria_locale.png' }
+  // 🏛️ LUOGHI - SITI ARCHEOLOGICI
+  { 
+    id: 'battistero-santa-maria-maggiore', 
+    nome: "Battistero Paleocristiano di Santa Maria Maggiore", 
+    comune: "Nocera Superiore", 
+    lat: 40.7485, 
+    lng: 14.6400, 
+    categoria: 'monumenti', 
+    descrizione: "Monumento paleocristiano VI secolo (La Rotonda). Vasca battesimale.", 
+    image: 'src/assets/Battistero Paleocristiano di Santa Maria Maggiore.jpeg',
+    it: { nome: "Battistero Paleocristiano di Santa Maria Maggiore", descrizione: "Monumento paleocristiano VI secolo (La Rotonda). Vasca battesimale." },
+    en: { nome: "Early Christian Baptistery of Santa Maria Maggiore", descrizione: "6th-century early Christian monument (The Rotunda). Baptismal font." }
+  },
+  { id: 'villa-calvanese', 
+    nome: "Villa Calvanese", 
+    comune: "Castel San Giorgio", 
+    lat: 40.7800, lng: 14.7000, 
+    categoria: 'monumenti', 
+    descrizione: "Prestigiosa villa nobiliare del XVIII secolo, centro culturale dell'Agro.", 
+    image: 'src/assets/Palazzo-Villa-Calvanese.png' },
+  { 
+    id: 'museo-archeologico-provinciale', 
+    nome: "Museo Archeologico Provinciale dell'Agro Nocerino", 
+    comune: "Nocera Inferiore", 
+    lat: 40.7475, 
+    lng: 14.6180, 
+    categoria: 'monumenti', 
+    descrizione: "Collezione di reperti dell'antica Nuceria Alfaterna.", 
+    image: "src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg",
+    it: { nome: "Museo Archeologico Provinciale dell'Agro Nocerino", descrizione: "Collezione di reperti dell'antica Nuceria Alfaterna." },
+    en: { nome: "Provincial Archaeological Museum of Agro Nocerino", descrizione: "Collection of artifacts from ancient Nuceria Alfaterna." }
+  },
+  { 
+    id: 'castello-parco-fienga', 
+    nome: "Castello del Parco Fienga", 
+    comune: "Nocera Inferiore", 
+    lat: 40.7478, 
+    lng: 14.6205, 
+    categoria: 'castelli', 
+    descrizione: "Fortezza medievale con viste panoramiche.", 
+    image: 'src/assets/Castello_Del_Parco_Nocera.jpg',
+    it: { nome: "Castello del Parco Fienga", descrizione: "Fortezza medievale con viste panoramiche." },
+    en: { nome: "Fienga Park Castle", descrizione: "Medieval fortress with panoramic views." }
+  },
+  { 
+    id: 'museo-valle-sarno', 
+    nome: "Museo Archeologico Nazionale della Valle del Sarno", 
+    comune: "Sarno", 
+    lat: 40.8120, 
+    lng: 14.6200, 
+    categoria: 'monumenti', 
+    descrizione: "Palazzo Capua - insediamenti dal IX sec. a.C.", 
+    image: 'src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg',
+    it: { nome: "Museo Archeologico Nazionale della Valle del Sarno", descrizione: "Palazzo Capua - insediamenti dal IX sec. a.C." },
+    en: { nome: "National Archaeological Museum of the Sarno Valley", descrizione: "Capua Palace - settlements from the 9th century BC." }
+  },
+  { 
+    id: 'cattedrale-san-prisco', 
+    nome: "Cattedrale di San Prisco", 
+    comune: "Nocera Inferiore", 
+    lat: 40.7470, 
+    lng: 14.6170, 
+    categoria: 'chiese', 
+    descrizione: "Chiesa storica della diocesi locale.", 
+    image: 'src/assets/Cattedrale di San Prisco.jpg',
+    it: { nome: "Cattedrale di San Prisco", descrizione: "Chiesa storica della diocesi locale." },
+    en: { nome: "St. Prisco Cathedral", descrizione: "Historic church of the local diocese." }
+  },
+  { 
+    id: 'basilica-santalfonso', 
+    nome: "Basilica di Sant'Alfonso Maria de' Liguori", 
+    comune: "Pagani", 
+    lat: 40.7235, 
+    lng: 14.5760, 
+    categoria: 'chiese', 
+    descrizione: "Santuario e museo alfonsiano.", 
+    image: "src/assets/Basilica di Sant'Alfonso Maria de' Liguori.jpg",
+    it: { nome: "Basilica di Sant'Alfonso Maria de' Liguori", descrizione: "Santuario e museo alfonsiano." },
+    en: { nome: "Basilica of St. Alphonsus Maria de' Liguori", descrizione: "Alphonsian sanctuary and museum." }
+  },
+  { 
+    id: 'santuario-madonna-galline', 
+    nome: "Santuario di Maria SS. del Carmelo", 
+    comune: "Pagani", 
+    lat: 40.7240, 
+    lng: 14.5755, 
+    categoria: 'chiese', 
+    descrizione: "Centro spirituale con festa tradizionale.", 
+    image: 'src/assets/Santuario di Maria SS. del Carmelo.jpg',
+    it: { nome: "Santuario di Maria SS. del Carmelo", descrizione: "Centro spirituale con festa tradizionale." },
+    en: { nome: "Sanctuary of Maria SS. del Carmelo", descrizione: "Spiritual center with traditional festival." }
+  },
+  { 
+    id: 'concattedrale-san-michele', 
+    nome: "Concattedrale di San Michele Arcangelo", 
+    comune: "Sarno", 
+    lat: 40.8115, 
+    lng: 14.6220, 
+    categoria: 'chiese', 
+    descrizione: "Chiesa storica nel centro di Sarno.", 
+    image: 'src/assets/Concattedrale di San Michele Arcangelo.jpg',
+    it: { nome: "Concattedrale di San Michele Arcangelo", descrizione: "Chiesa storica nel centro di Sarno." },
+    en: { nome: "Co-cathedral of St. Michael the Archangel", descrizione: "Historic church in the center of Sarno." }
+  },
+  { 
+    id: 'santuario-santa-maria-dei-bagni', 
+    nome: "Santuario di Santa Maria dei Bagni", 
+    comune: "Scafati", 
+    lat: 40.7440, 
+    lng: 14.4840, 
+    categoria: 'chiese', 
+    descrizione: "Luogo sacro legato a fonte miracolosa.", 
+    image: 'src/assets/Santuario di Santa Maria dei Bagni.jpg',
+    it: { nome: "Santuario di Santa Maria dei Bagni", descrizione: "Luogo sacro legato a fonte miracolosa." },
+    en: { nome: "Sanctuary of Santa Maria dei Bagni", descrizione: "Sacred place linked to a miraculous spring." }
+  },
+  { 
+    id: 'piazza-del-corso', 
+    nome: "Piazza del Corso", 
+    comune: "Nocera Inferiore", 
+    lat: 40.7480, 
+    lng: 14.6190, 
+    categoria: 'monumenti', 
+    descrizione: "Area archeologica a vista con resti romani.", 
+    image: 'src/assets/Piazza del Corso-Nocera_Inferiore.jpg',
+    it: { nome: "Piazza del Corso", descrizione: "Area archeologica a vista con resti romani." },
+    en: { nome: "Corso Square", descrizione: "Visible archaeological area with Roman remains." }
+  },
+  { 
+    id: 'eremo-santa-maria-castello', 
+    nome: "Eremo di Santa Maria a Castello", 
+    comune: "Castel San Giorgio", 
+    lat: 40.7720, 
+    lng: 14.5560, 
+    categoria: 'castelli', 
+    descrizione: "Eremo medievale con vista panoramica.", 
+    image: 'src/assets/Eremo_di_Santa_Maria_a_Castello.jpg',
+    it: { nome: "Eremo di Santa Maria a Castello", descrizione: "Eremo medievale con vista panoramica." },
+    en: { nome: "Hermitage of Santa Maria a Castello", descrizione: "Medieval hermitage with panoramic view." }
+  },
 ];
 
 // ═════════════════════════════════════════════════════════════
@@ -440,7 +560,7 @@ const luoghi = [
 
 /**
  * FUNZIONE: Crea la griglia di siti dinamicamente
- * ARGS: filter = 'all' mostra tutti, oppure 'storia'/'natura'/'enogastronomia' per filtrare
+ * ARGS: filter = 'all' mostra tutti, oppure /'chiese'/'monumenti'/'castelli' per filtrare
  * COME FUNZIONA:
  * 1. Pulisce la griglia (innerHTML = '')
  * 2. Filtra i siti per categoria
@@ -468,6 +588,9 @@ function renderPlaces(filter = 'all') {
     card.style.animationDelay = `${idx * 0.1}s`; // Ogni card appare con 0.1s di ritardo
     
     // Step 3: Riempi la card con HTML
+    const categoryName = translations[currentLang][`filter-${l.categoria}`] || l.categoria;
+    const discoverMore = currentLang === 'it' ? 'Scopri di più' : 'Learn more';
+
     card.innerHTML = `
       <div class="place-card-inner">
         <!-- Immagine e overlay -->
@@ -476,22 +599,22 @@ function renderPlaces(filter = 'all') {
           <div class="place-overlay">
             <!-- Badge con icona categoria -->
             <span class="category-badge category-${l.categoria}">
-              ${getCategoryIcon(l.categoria)} ${l.categoria}
+              ${getCategoryIcon(l.categoria)} ${categoryName}
             </span>
           </div>
         </div>
         
         <!-- Contenuto della card -->
         <div class="place-body">
-          <div class="place-title">${l.nome}</div>
+          <div class="place-title">${l[currentLang]?.nome || l.nome}</div>
           <div class="place-meta">
             <span class="meta-item">🗺️ ${l.comune}</span>
           </div>
-          <p class="place-desc">${l.descrizione}</p>
+          <p class="place-desc">${l[currentLang]?.descrizione || l.descrizione}</p>
           <div class="place-actions">
             <!-- Bottone che porta alla pagina del sito -->
             <a class="btn btn-primary btn-glow" href="places/${l.id}.html">
-              <span>Scopri di più</span>
+              <span>${discoverMore}</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -513,10 +636,9 @@ function renderPlaces(filter = 'all') {
  */
 function getCategoryIcon(category) {
   const icons = {
-    'storia': '🏛️',           // Tempio antico
-    'natura': '🌿',           // Foglia
-    'enogastronomia': '🍷',   // Bicchiere di vino
-    'default': '📍'           // Pin mappa
+    'chiese': '🏛️',
+    'monumenti': '⛪',
+    'castelli': '🏰'         // Tempio antico
   };
   return icons[category] || icons.default;
 }
@@ -579,6 +701,153 @@ function initMap() {
 }
 
 // ═════════════════════════════════════════════════════════════
+// 🤖 SEZIONE 11: CHATBOT - L'ASSISTENTE VIRTUALE
+// ═════════════════════════════════════════════════════════════
+
+function initChatbot() {
+  // Se il chatbot-widget non esiste, lo creiamo dinamicamente
+  if (!document.getElementById('chatbot-widget')) {
+    const chatbotHTML = `
+      <div id="chatbot-widget" class="chatbot-widget">
+        <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open chat">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="notification-badge" id="chat-notification">1</span>
+        </button>
+
+        <div id="chatbot-window" class="chatbot-window">
+          <div class="chatbot-header">
+            <div class="chatbot-header-info">
+              <div class="chatbot-avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                  <path d="M12 6a1 1 0 1 0 1 1 1 1 0 0 0-1-1zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 data-i18n="chat-title">${translations[currentLang]['chat-title']}</h4>
+                <span class="status-online" data-i18n="chat-online">${translations[currentLang]['chat-online']}</span>
+              </div>
+            </div>
+            <button id="chatbot-close" class="chatbot-close">&times;</button>
+          </div>
+
+          <div id="chatbot-messages" class="chatbot-messages">
+            <div class="message bot">
+              <div class="message-content" data-i18n="chat-welcome">
+                ${translations[currentLang]['chat-welcome']}
+              </div>
+            </div>
+          </div>
+
+          <div class="chatbot-input-container">
+            <form id="chatbot-form">
+              <input type="text" id="chatbot-input" placeholder="${translations[currentLang]['chat-placeholder']}" data-i18n="chat-placeholder" autocomplete="off" />
+              <button type="submit" id="chatbot-send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', chatbotHTML);
+  }
+
+  const widget = document.getElementById('chatbot-widget');
+  const toggle = document.getElementById('chatbot-toggle');
+  const window_el = document.getElementById('chatbot-window');
+  const close = document.getElementById('chatbot-close');
+  const form = document.getElementById('chatbot-form');
+  const input = document.getElementById('chatbot-input');
+  const messagesContainer = document.getElementById('chatbot-messages');
+  const notification = document.getElementById('chat-notification');
+
+  if (!widget || !toggle || !window_el) return;
+
+  const openChat = () => {
+    window_el.classList.add('active');
+    notification.style.display = 'none';
+    input.focus();
+  };
+
+  // Apri/Chiudi chat
+  toggle.addEventListener('click', openChat);
+
+  // Anche il pulsante AI nella navbar apre la chat
+  const navAiBtn = document.getElementById('nav-ai-btn');
+  if (navAiBtn) {
+    navAiBtn.addEventListener('click', openChat);
+  }
+
+  close.addEventListener('click', () => {
+    window_el.classList.remove('active');
+  });
+
+  // Gestione invio messaggi
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Aggiungi messaggio utente
+    addMessage(text, 'user');
+    input.value = '';
+
+    // Risposta del bot dopo un piccolo delay
+    setTimeout(() => {
+      const response = getBotResponse(text.toLowerCase());
+      addMessage(response, 'bot');
+    }, 1000);
+  });
+
+  function addMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `message ${sender}`;
+    msgDiv.innerHTML = `<div class="message-content">${text}</div>`;
+    messagesContainer.appendChild(msgDiv);
+    
+    // Scroll in fondo
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function getBotResponse(input) {
+    // Risposte semplici basate su parole chiave
+    if (input.includes('ciao') || input.includes('hello') || input.includes('hi')) {
+      return currentLang === 'it' 
+        ? "Ciao! Come posso aiutarti a scoprire l'Agro Nocerino-Sarnese?" 
+        : "Hello! How can I help you discover Agro Nocerino-Sarnese?";
+    }
+    
+    if (input.includes('dove') || input.includes('where') || input.includes('location')) {
+      return currentLang === 'it'
+        ? "Ci troviamo in Campania, tra Napoli e Salerno. Puoi vedere la mappa qui sopra!"
+        : "We are located in Campania, between Naples and Salerno. You can see the map above!";
+    }
+
+    if (input.includes('mangiare') || input.includes('eat') || input.includes('food')) {
+      return currentLang === 'it'
+        ? "L'Agro è famoso per il pomodoro San Marzano e i cipollotti. Ti consiglio di visitare le nostre aziende agricole!"
+        : "The region is famous for San Marzano tomatoes and spring onions. I suggest visiting our local farms!";
+    }
+
+    if (input.includes('storia') || input.includes('history') || input.includes('monumenti')) {
+      return currentLang === 'it'
+        ? "Abbiamo una storia millenaria! Non perdere il Battistero di Nocera o il Castello del Parco."
+        : "We have a thousand-year history! Don't miss the Nocera Baptistery or the Park Castle.";
+    }
+
+    return currentLang === 'it'
+      ? "Interessante! Puoi chiedermi informazioni su storia, cibo, o dove ci troviamo."
+      : "Interesting! You can ask me about history, food, or where we are located.";
+  }
+}
+
+// ═════════════════════════════════════════════════════════════
 // �🚀 SEZIONE 7: INIZIALIZZAZIONE - AVVIA TUTTO AL CARICAMENTO
 // ═════════════════════════════════════════════════════════════
 
@@ -590,9 +859,6 @@ function initMap() {
 document.addEventListener('DOMContentLoaded', () => {
   // Tema: Carica il tema salvato
   initTheme();
-  
-  // Autenticazione: Aggiorna il bottone di login
-  updateAuthUI();
   
   // Carousel: Mostra la prima immagine
   showImage(currentImage);
@@ -607,6 +873,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Siti: Crea la griglia e attiva i filtri
   renderPlaces();                // Crea le card iniziali
   initPlaceFilters();            // Attiva i bottoni di filtro
+
+  // Chatbot: Inizializza l'assistente
+  initChatbot();
+
+  // Traduzione: Inizializza lingua e listener
+  updateContent();
+  const langToggle = document.getElementById('language-toggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', toggleLanguage);
+  }
 });
 
 // ═════════════════════════════════════════════════════════════

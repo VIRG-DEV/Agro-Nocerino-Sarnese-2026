@@ -13,8 +13,8 @@ La Casa (Sito)
 ├── 🚪 ENTRATA (index.html) ← La pagina principale che vedi
 ├── 🎨 DIPINTI (styles.css) ← I colori e le decorazioni
 ├── 🧠 CERVELLO (script.js) ← Una persona che controlla tutto
-└── 📚 STANZE (places/) ← 28 stanze diverse (i siti da visitare)
-    ├── monte-vesuvio.html
+└── 📚 STANZE (places/) ← 11 stanze diverse (i siti da visitare)
+    ├── castello-parco-fienga.html
     ├── azienda-viticola-fiano.html
     └── ... (altre 26 stanze)
 ```
@@ -45,8 +45,8 @@ Il browser scarica:
 
 - Clicca i bottoni
 - Vede animazioni dolci
-- Legge i 28 siti nel catalogo
-- Si registra per il login
+- Legge i siti nel catalogo
+- Parla con l'Agro AI Chatbot
 - Tutto funziona perfetto!
 
 ---
