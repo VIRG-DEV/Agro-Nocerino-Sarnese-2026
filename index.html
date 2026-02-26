@@ -46,13 +46,24 @@
       </button>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#discover" class="nav-link">Discover</a>
-        <a href="#places" class="nav-link">Luoghi</a>
-        <a href="#map" class="nav-link">Map</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#home" class="nav-link" data-i18n="nav-home">Home</a>
+        <a href="#discover" class="nav-link" data-i18n="nav-discover">Discover</a>
+        <a href="#places" class="nav-link" data-i18n="nav-places">Luoghi</a>
+        <a href="#map" class="nav-link" data-i18n="nav-map">Map</a>
+        <a href="#gallery" class="nav-link" data-i18n="nav-gallery">Gallery</a>
+        <a href="#3D" class="nav-link" data-i18n="nav-3d">3D</a>
         
         <div class="nav-actions">
+          <!-- Translation Button -->
+          <button id="language-toggle" class="icon-btn" aria-label="Toggle language">
+            <svg class="lang-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="language-toggle-text">English</span>
+          </button>
+
           <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
             <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="5"></circle>
@@ -69,63 +80,54 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
-          
-          <button id="auth-btn" class="btn btn-primary"></button>
+
+          <button
+            id="voice-guide-btn"
+            class="btn btn-outline-nav"
+            aria-label="Guida Vocale"
+            title="Attiva Guida Vocale"
+          >
+            <svg
+              class="voice-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+              ></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <svg
+              class="stop-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="display: none;"
+            >
+              <rect x="6" y="6" width="12" height="12"></rect>
+            </svg>
+            <span class="btn-text">Guida Vocale</span>
+          </button>
+
+          <button id="nav-ai-btn" class="btn btn-primary nav-ai-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 5px;">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+            </svg>
+            <span data-i18n="nav-ai">Agro AI</span>
+          </button>
         </div>
       </div>
     </div>
   </nav>
-
-  <!-- Login Modal -->
-  <div id="login-modal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close">&times;</button>
-      
-      <div id="login-form-container" class="auth-container">
-        <h2>Welcome Back</h2>
-        <p class="auth-subtitle">Sign in to your account</p>
-        <form id="login-form">
-          <div class="form-group">
-            <label for="login-username">Username</label>
-            <input type="text" id="login-username" required />
-          </div>
-          <div class="form-group">
-            <label for="login-password">Password</label>
-            <input type="password" id="login-password" required />
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Sign In</button>
-        </form>
-        <p class="auth-toggle">
-          Don't have an account? 
-          <a href="#" id="show-register">Register</a>
-        </p>
-      </div>
-
-      <div id="register-form-container" class="auth-container" style="display: none;">
-        <h2>Create Account</h2>
-        <p class="auth-subtitle">Start your journey with us</p>
-        <form id="register-form">
-          <div class="form-group">
-            <label for="register-username">Username</label>
-            <input type="text" id="register-username" required />
-          </div>
-          <div class="form-group">
-            <label for="register-email">Email</label>
-            <input type="email" id="register-email" required />
-          </div>
-          <div class="form-group">
-            <label for="register-password">Password</label>
-            <input type="password" id="register-password" required />
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Register</button>
-        </form>
-        <p class="auth-toggle">
-          Already have an account? 
-          <a href="#" id="show-login">Sign in</a>
-        </p>
-      </div>
-    </div>
-  </div>
 
   <!-- Banner -->
   <div id="banner" class="banner">
@@ -138,13 +140,13 @@
   <section id="home" class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>Agro Nocerino-Sarnese</h1>
-      <p>Discover the heart of Southern Italy's cultural heritage, breathtaking landscapes, and agricultural traditions</p>
+      <h1 data-i18n="hero-title">Agro Nocerino-Sarnese</h1>
+      <p data-i18n="hero-subtitle">Discover the heart of Southern Italy's cultural heritage, breathtaking landscapes, and agricultural traditions</p>
       <div class="hero-actions">
-        <button class="btn btn-hero" onclick="document.getElementById('discover').scrollIntoView({ behavior: 'smooth' })">
+        <button class="btn btn-hero" onclick="document.getElementById('discover').scrollIntoView({ behavior: 'smooth' })" data-i18n="hero-explore">
           Explore the Region
         </button>
-        <button class="btn btn-outline" onclick="document.getElementById('map').scrollIntoView({ behavior: 'smooth' })">View Map</button>
+        <button class="btn btn-outline" onclick="document.getElementById('map').scrollIntoView({ behavior: 'smooth' })" data-i18n="hero-view-map">View Map</button>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -158,15 +160,15 @@
   <section id="places" class="places-section">
     <div class="container">
       <div class="section-header">
-        <h2>Luoghi da Non Perdere</h2>
-        <p>Scopri alcune delle bellezze dell'Agro-Nocerino-Sarnese. Clicca per maggiori dettagli e per trovarle sulla mappa.</p>
+        <h2 data-i18n="section-places-title">Luoghi da Non Perdere</h2>
+        <p data-i18n="section-places-desc">Scopri alcune delle bellezze dell'Agro-Nocerino-Sarnese. Clicca per maggiori dettagli e per trovarle sulla mappa.</p>
       </div>
 
       <div class="places-controls">
-        <button class="btn" data-filter="all">Tutti</button>
-        <button class="btn" data-filter="storia">Storia</button>
-        <button class="btn" data-filter="natura">Natura</button>
-        <button class="btn" data-filter="enogastronomia">Enogastronomia</button>
+        <button class="btn" data-filter="all" data-i18n="filter-all">Tutti</button>
+        <button class="btn" data-filter="chiese" data-i18n="filter-churches">Chiese</button>
+        <button class="btn" data-filter="monumenti" data-i18n="filter-monuments">Monumenti</button>
+        <button class="btn" data-filter="castelli" data-i18n="filter-castles">Castelli</button>
       </div>
 
       <div id="places-grid" class="places-grid" aria-live="polite"></div>
@@ -177,8 +179,8 @@
   <section id="discover" class="discover-section">
     <div class="container">
       <div class="section-header">
-        <h2>Discover the Region</h2>
-        <p>A land where history, culture, and nature converge to create unforgettable experiences</p>
+        <h2 data-i18n="section-discover-title">Discover the Region</h2>
+        <p data-i18n="section-discover-desc">A land where history, culture, and nature converge to create unforgettable experiences</p>
       </div>
 
       <div class="poi-grid scroll-trigger">
@@ -189,8 +191,8 @@
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
           </div>
-          <h3>Historic Heritage</h3>
-          <p>Explore centuries-old churches, cathedrals, and architectural marvels that tell the story of our rich past.</p>
+          <h3 data-i18n="poi-historic-title">Historic Heritage</h3>
+          <p data-i18n="poi-historic-desc">Explore centuries-old churches, cathedrals, and architectural marvels that tell the story of our rich past.</p>
         </div>
 
         <div class="poi-card scroll-stagger">
@@ -199,8 +201,8 @@
               <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
             </svg>
           </div>
-          <h3>Natural Beauty</h3>
-          <p>From Mount Vesuvius to the Sarno Valley, discover breathtaking landscapes and pristine natural environments.</p>
+          <h3 data-i18n="poi-natural-title">Natural Beauty</h3>
+          <p data-i18n="poi-natural-desc">From the Sarno Valley to the Lattari Mountains, discover breathtaking landscapes and pristine natural environments.</p>
         </div>
 
         <div class="poi-card scroll-stagger">
@@ -210,8 +212,8 @@
               <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
             </svg>
           </div>
-          <h3>Agricultural Excellence</h3>
-          <p>Experience farm-to-table traditions, visit working farms, and taste authentic local produce.</p>
+          <h3 data-i18n="poi-agri-title">Agricultural Excellence</h3>
+          <p data-i18n="poi-agri-desc">Experience farm-to-table traditions, visit working farms, and taste authentic local produce.</p>
         </div>
 
         <div class="poi-card scroll-stagger">
@@ -230,8 +232,8 @@
               <path d="M8 14h.01"></path>
             </svg>
           </div>
-          <h3>Ancient Ruins</h3>
-          <p>Walk through history at nearby Pompeii and other archaeological sites that bring ancient Rome to life.</p>
+          <h3 data-i18n="poi-ruins-title">Archaeological Sites</h3>
+          <p data-i18n="poi-ruins-desc">Explore ancient Nuceria Alfaterna and other historic sites that bring the past to life.</p>
         </div>
       </div>
 
@@ -239,19 +241,19 @@
       <div class="stats-grid scroll-trigger">
         <div class="stat-item">
           <div class="stat-number" data-target="50">0</div>
-          <div class="stat-label">Historic Sites</div>
+          <div class="stat-label" data-i18n="stat-historic">Historic Sites</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="100">0</div>
-          <div class="stat-label">Local Farms</div>
+          <div class="stat-label" data-i18n="stat-farms">Local Farms</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="25">0</div>
-          <div class="stat-label">Villages</div>
+          <div class="stat-label" data-i18n="stat-villages">Villages</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="2000">0</div>
-          <div class="stat-label">Years of History</div>
+          <div class="stat-label" data-i18n="stat-years">Years of History</div>
         </div>
       </div>
     </div>
@@ -261,8 +263,8 @@
   <section id="map" class="map-section">
     <div class="container">
       <div class="section-header">
-        <h2>Explore the Region</h2>
-        <p>Navigate through historic sites, cultural landmarks, and natural beauty</p>
+        <h2 data-i18n="section-map-title">Explore the Region</h2>
+        <p data-i18n="section-map-desc">Navigate through historic sites, cultural landmarks, and natural beauty</p>
       </div>
       <div id="interactive-map" class="scroll-trigger"></div>
     </div>
@@ -273,8 +275,8 @@
   <section id="gallery" class="carousel-section">
     <div class="container">
       <div class="section-header">
-        <h2>Gallery</h2>
-        <p>Experience the beauty of Agro Nocerino-Sarnese through images</p>
+        <h2 data-i18n="section-gallery-title">Gallery</h2>
+        <p data-i18n="section-gallery-desc">Experience the beauty of Agro Nocerino-Sarnese through images</p>
       </div>
       
       <div class="carousel-container scroll-trigger">
@@ -285,10 +287,10 @@
         </button>
         
         <div class="carousel-images" id="carousel-images">
-          <img src="src/assets/Monte Vesuvio & Parco Nazionale.jpg" alt="Landscape view of Agro Nocerino-Sarnese" class="carousel-image active" />
-          <img src="src/assets/Cattedrale di San Prisco.jpg" alt="Historic landmark in the region" class="carousel-image" />
-          <img src="src/assets/Azienda Viticola Fiano DOCG.jpg" alt="Agricultural fields" class="carousel-image" />
-          <img src="src/assets/Pompei.jpg" alt="Ancient ruins" class="carousel-image" />
+          <img src="src/assets/Castello_Del_Parco_Nocera.jpg" alt="Castello del Parco Fienga" class="carousel-image active" />
+          <img src="src/assets/Cattedrale di San Prisco.jpg" alt="Cattedrale di San Prisco" class="carousel-image" />
+          <img src="src/assets/Azienda Viticola Fiano DOCG.jpg" alt="Azienda Viticola" class="carousel-image" />
+          <img src="src/assets/Battistero Paleocristiano di Santa Maria Maggiore.jpeg" alt="Battistero Paleocristiano" class="carousel-image" />
         </div>
         
         <button class="carousel-btn carousel-next" id="carousel-next">
@@ -313,21 +315,22 @@
             </svg>
             <h3>Agro Nocerino-Sarnese</h3>
           </div>
-          <p>Celebrating the cultural heritage and natural beauty of Southern Italy's most authentic region.</p>
+          <p data-i18n="footer-about">Celebrating the cultural heritage and natural beauty of Southern Italy's most authentic region.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer-links">Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#discover">Discover</a></li>
-            <li><a href="#map">Map</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#home" data-i18n="nav-home">Home</a></li>
+            <li><a href="#discover" data-i18n="nav-discover">Discover</a></li>
+            <li><a href="#map" data-i18n="nav-map">Map</a></li>
+            <li><a href="#gallery" data-i18n="nav-gallery">Gallery</a></li>
+            <li><a href="#AI" data-i18n="nav-ai">AI</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer-contact">Contact</h4>
           <ul class="contact-list">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -353,7 +356,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Follow Us</h4>
+          <h4 data-i18n="footer-follow">Follow Us</h4>
           <div class="social-links">
             <a href="#" class="social-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -377,12 +380,15 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Agro Nocerino-Sarnese Portal. All rights reserved.</p>
+        <p data-i18n="footer-rights">© 2026 Agro Nocerino-Sarnese Portal. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="voice-guide.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
